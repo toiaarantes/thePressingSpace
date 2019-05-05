@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PontoImprimir : MonoBehaviour
 {
     public Text UIText;
-
+    public GameObject telapontos;
+    public float printpontos;
 
 
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class PontoImprimir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        UIText.text = PontoTotal.ToString("f0");
+        printpontos = telapontos.GetComponent<Player>().PontoTotal;
+        UIText.text = printpontos.ToString("f0");
     }
-}*/
+}

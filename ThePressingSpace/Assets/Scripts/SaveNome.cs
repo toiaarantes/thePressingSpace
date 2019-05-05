@@ -7,14 +7,16 @@ using UnityEngine.UI;
 public class SaveNome : MonoBehaviour
 {
     public InputField playerName;
-    // Start is called before the first frame update
+    public GameObject foguete;
+    private float pontos = 0;
+    
     void Start()
     {
-        
+        pontos = foguete.GetComponent<Player>().PontoTotal;
     }
     public void InitialsEntered()
     {
-        GetComponent<RankingController>().CheckForHighScore(PontoTotal, playerName.text);
+        GetComponent<RankingController>().CheckForHighScore(pontos, playerName.text);
     }
     // Update is called once per frame
     void Update()

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 421686085}
   - component: {fileID: 421686088}
   - component: {fileID: 421686087}
+  - component: {fileID: 421686086}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -149,6 +150,21 @@ RectTransform:
   m_AnchoredPosition: {x: -397.16, y: -157.95}
   m_SizeDelta: {x: 9.576, y: 1.796}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &421686086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421686084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82aac558406596e4ca1a613a3c5a1f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText: {fileID: 421686087}
+  telapontos: {fileID: 1293421986}
+  printpontos: 0
 --- !u!114 &421686087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.89043796, g: 0.9716981, b: 0.1512549, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -171,11 +187,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -458,9 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  playerName: {fileID: 0}
   PontoTotal: 0
-  UIText: {fileID: 0}
 --- !u!61 &1293421991
 BoxCollider2D:
   m_ObjectHideFlags: 0
