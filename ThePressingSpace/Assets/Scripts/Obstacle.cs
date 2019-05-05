@@ -6,10 +6,18 @@ public class Obstacle : MonoBehaviour
 {
     public int damage = 1;
     public float speed;
- 
-    void Update()
-    {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+
+        }
     }
-}
+        void Update()
+        {
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        }
+ }

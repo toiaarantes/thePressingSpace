@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public float speed = 0;
     private Rigidbody2D rb;
+    
+    public float PontoTotal = 0;
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
 
     void Update()
     {
@@ -19,5 +24,6 @@ public class Player : MonoBehaviour
             Vector2 force = transform.up * speed;
             rb.AddForce(force, ForceMode2D.Force);
         }
-    }
+        PontoTotal += Time.deltaTime*5;
+    } 
 }
